@@ -3,13 +3,7 @@
 node {
 
     stage('checkout') {
-       checkout([$class: 'GitSCM',
-          branches: [[name:  env.BRANCH_NAME]],
-          doGenerateSubmoduleConfigurations: false,
-          extensions: [],
-          submoduleCfg: [],
-          userRemoteConfigs: [[credentialsId: 'gitsshkey', url: 'https://github.com/romanprog/djeg_pipeline']]
-       ])
+        checkout scm
     }
 
     def dockerImage
