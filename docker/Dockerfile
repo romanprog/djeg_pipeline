@@ -3,6 +3,6 @@ FROM library/golang
 ADD main.go /opt/
 
 RUN  go get github.com/sevlyar/go-daemon \
-  && go build /opt/main.go
+  && cd /opt/ && go build main.go
 
 ENTRYPOINT ["/opt/main"]

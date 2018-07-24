@@ -5,6 +5,8 @@ import (
     "html"
     "log"
     "net/http"
+    "bufio"
+    "os"
 
     "github.com/sevlyar/go-daemon"
 )
@@ -36,6 +38,9 @@ func main() {
     log.Print("daemon started")
 
     serveHTTP()
+    reader := bufio.NewReader(os.Stdin)
+    text, _ := reader.ReadString('\n')
+    log.Print(text)
 }
 
 func serveHTTP() {
