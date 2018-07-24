@@ -13,6 +13,6 @@ func main() {
     reader := bufio.NewReader(os.Stdin)
     text, _ := reader.ReadString('\n')
     fmt.Printf(text)
-    fmt.Printf('Helo Build')
+    fmt.Printf("Helo Build")
 }
 
