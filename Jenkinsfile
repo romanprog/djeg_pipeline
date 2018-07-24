@@ -7,7 +7,7 @@ node {
     }
 
     def dockerImage
-    def docketTag = env.BRANCH_NAME.replaceAll("/", "-")
+    def docketTag = 'latest'
 
     stage('build docker') {
         sh "ls -las"
@@ -18,9 +18,6 @@ node {
     stage('push docker'){
         docker.withRegistry('https://registry.djeg-test.shalb.com') {
             dockerImage.push(docketTag)
-            if ("${env.push_latest}" == "true"){
-                 dockerImage.push('latest')
-            }
         }
     }
 
