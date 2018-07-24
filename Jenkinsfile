@@ -9,10 +9,11 @@ node {
     def dockerImage
     def docketTag = 'latest'
 
-    stage('build docker') {
+    stage('build go') {
         sh "ls -las"
         sh "cp -R docker/* ."
-        dockerImage = docker.build("go-daemon:${docketTag}", '.')
+        sh "go get github.com/sevlyar/go-daemon"
+        sh "go build main.go"
     }
 
     stage('push docker'){
