@@ -8,7 +8,7 @@ node {
           doGenerateSubmoduleConfigurations: false,
           extensions: [],
           submoduleCfg: [],
-          userRemoteConfigs: [[credentialsId: 'cibot', url: 'https://github.com/romanprog/djeg_pipeline']]
+          userRemoteConfigs: [[credentialsId: 'gitsshkey', url: 'https://github.com/romanprog/djeg_pipeline']]
        ])
     }
 
