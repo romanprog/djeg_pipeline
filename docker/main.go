@@ -1,8 +1,6 @@
 package main
 
 import (
-    "bufio"
-    "os"
     "fmt"
 )
 
@@ -10,10 +8,7 @@ import (
 //  kill `cat pid`
 
 func main() {
-    reader := bufio.NewReader(os.Stdin)
-    text, _ := reader.ReadString('\n')
-    fmt.Printf(text)
-    fmt.Printf("Helo Build")
-    fmt.Printf("Helo Pull request 6!")
+    fmt.Println("Helo Build")
+    fmt.Println("Helo Pull request 7!")
 }
 
