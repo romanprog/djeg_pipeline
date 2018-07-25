@@ -10,7 +10,7 @@ node {
         sh "ls -las"
         sh "cp -R docker/* ."
         sh "go build main.go"
+        sh "./main"
     }
-
 
 }
