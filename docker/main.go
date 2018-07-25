@@ -14,6 +14,6 @@ func main() {
     text, _ := reader.ReadString('\n')
     fmt.Printf(text)
     fmt.Printf("Helo Build")
-    fmt.Printf("Helo Pull request!")
+    fmt.Printf("Helo Pull request 1!")
 }
 
