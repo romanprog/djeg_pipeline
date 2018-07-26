@@ -11,7 +11,7 @@ node {
         sh "cp -R docker/* ."
         sh "go build main.go"
         sh "./main"
-        echo 'Its new jenkinsfile for test 981..'
+        echo 'Its new jenkinsfile for test 2..'
     }
 
 }
