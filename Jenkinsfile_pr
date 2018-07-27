@@ -22,7 +22,7 @@ pipeline {
 
     post {
         always {
-             echo "All tests OK"
+             sh "cat ./result.txt"
         }
     }
 }
