@@ -22,7 +22,7 @@ pipeline {
 
     post {
         always {
-            cat 'result.txt'
+             ./result.txt
         }
     }
 }
