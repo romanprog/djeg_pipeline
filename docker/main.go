@@ -20,7 +20,6 @@ func main() {
 		defer file.Close()
 
 		fmt.Fprintf(file, "Results OK")
-		// os.Exit(1)
 	}
 	fmt.Println("goodbye cruel world")
 }
