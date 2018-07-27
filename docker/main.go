@@ -15,7 +15,8 @@ func main() {
                 fmt.Println("Run tests...")
 		file, err := os.Create("result.txt")
 		if err != nil {
-			log.Fatal("Cannot create file", err)
+			fmt.Println("Cannot create file", err)
+			os.Exit(10)
 		}
 		defer file.Close()
 
