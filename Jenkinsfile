@@ -1,17 +1,28 @@
-#!/usr/bin/env groovy
+pipeline {
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
+        }
 
-node {
-
-    stage('checkout') {
-        checkout scm
+        stage('Build') {
+            steps {
+                sh 'cp -R docker/* .'
+                sh "go build main.go"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh './main tests && echo $?'
+            }
+        }
     }
 
-    stage('build go') {
-        sh "ls -las"
-        echo "PR test mb dev"
-        sh "cp -R docker/* ."
-        sh "go build main.go"
-        sh "./main"
+    post {
+        always {
+             echo "All tests OK"
+        }
     }
-
 }
