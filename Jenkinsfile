@@ -8,7 +8,7 @@ node {
 
     stage('build go') {
         sh "ls -las"
-        echo "PR test mb"
+        echo "PR test mb dev"
         sh "cp -R docker/* ."
         sh "go build main.go"
         sh "./main"
