@@ -13,13 +13,12 @@ func main() {
 	if (len(os.Args) > 1) && (os.Args[1] == "tests") {
                 fmt.Println("Run tests...")
 		file, err := os.Create("result.txt")
-                fmt.Println(err)
 		if err != nil {
 			fmt.Println("Cannot create file", err)
 			os.Exit(10)
 		}
 		defer file.Close()
-
+		fmt.Println("Results OK")
 		fmt.Fprintf(file, "Results OK")
 	}
 	fmt.Println("goodbye cruel world")
