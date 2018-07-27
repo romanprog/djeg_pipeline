@@ -22,7 +22,7 @@ pipeline {
 
     post {
         always {
-            junit 'result.txt'
+            cat 'result.txt'
         }
     }
 }
