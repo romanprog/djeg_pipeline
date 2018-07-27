@@ -9,7 +9,7 @@ import (
 //  kill `cat pid`
 
 func main() {
-	fmt.Println("Helo Pull request 10")
+	fmt.Println("Pull request 10")
 	if (len(os.Args) > 1) && (os.Args[1] == "tests") {
                 fmt.Println("Run tests...")
 		file, err := os.Create("result.txt")
@@ -21,5 +21,5 @@ func main() {
 		fmt.Println("Results OK")
 		fmt.Fprintf(file, "Results OK")
 	}
-	fmt.Println("goodbye cruel world")
+	fmt.Println("goodbye")
 }
