@@ -8,8 +8,8 @@ import (
 //  kill `cat pid`
 
 func main() {
-    fmt.Println("Helo Build")
-    fmt.Println("Helo Pull request 10!")
+    fmt.Println("Helo Pull request 10")
+    fmt.Println("goodbye cruel world")
 //    BAG IS COMING!!
 }
 
