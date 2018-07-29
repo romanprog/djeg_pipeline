@@ -20,6 +20,7 @@ func main() {
 		defer file.Close()
 		fmt.Println("Results OK")
 		fmt.Fprintf(file, "Results OK")
+//		os.Exit(1)
 	}
 	fmt.Println("goodbye")
 }
